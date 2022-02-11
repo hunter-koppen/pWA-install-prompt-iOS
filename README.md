@@ -7,6 +7,9 @@
 ## Usage
 [step by step instructions]
 
+## Styling
+Use the .iOSPWA-container class to adjust the placement of the popup. If you wish to add more custom styling you can set the widget to debugmode and simply inspect it in the browser.
+
 ## Demo project
 [link to sandbox]
 

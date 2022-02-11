@@ -1,10 +1,24 @@
-import { Component, createElement } from "react";
+import { createElement, useCallback } from "react";
+import { PromptContainer } from "./components/PromptContainer";
 
-import { HelloWorldSample } from "./components/HelloWorldSample";
-import "./ui/PWAInstallPromptIOS.css";
+export function PWAInstallPromptIOS(props) {
+    const { onCancelAction, timesToShow, delay, permanentlyHideOnDismiss, debugMode, titleText, bodyText, firstStepText, secondStepText, cancelText } = props;
+    const onCancelHandler = useCallback(() => {
+        if (onCancelAction && onCancelAction.canExecute) {
+            onCancelAction.execute();
+        }
+    }, [onCancelAction]);
 
-export class PWAInstallPromptIOS extends Component {
-    render() {
-        return <HelloWorldSample sampleText={this.props.sampleText} />;
-    }
+    return <PromptContainer 
+        timesToShow={timesToShow}
+        delay={delay}
+        permanentlyHideOnDismiss={permanentlyHideOnDismiss}
+        debugMode={debugMode}
+        titleText={titleText}
+        bodyText={bodyText}
+        firstStepText={firstStepText}
+        secondStepText={secondStepText}
+        cancelText={cancelText}
+        onCancelAction={onCancelHandler} 
+    />;
 }

@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="clevr.pwainstallpromptios.PWAInstallPromptIOS" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
-        supportedPlatform="Web"
-        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
-    <name>PWAInstall Prompt IOS</name>
-    <description>My widget description</description>
+<widget id="clevr.pwainstallpromptios.PWAInstallPromptIOS" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>PWA Install Prompt IOS</name>
+    <description/>
     <icon/>
     <properties>
-        <propertyGroup caption="General">
-            <property key="sampleText" type="string" required="false">
-                <caption>Default value</caption>
-                <description>Sample text input</description>
-            </property>
+        <propertyGroup caption="Settings">
+            <propertyGroup caption="Settings">
+                <property key="timesToShow" type="integer" defaultValue="1" required="true">
+                    <caption>Time to show</caption>
+                    <description>How many times should the prompt be shown to the same device?</description>
+                </property>
+                <property key="delay" type="integer" defaultValue="1000" required="true">
+                    <caption>Delay in milliseconds</caption>
+                    <description/>
+                </property>
+                <property key="permanentlyHideOnDismiss" type="boolean" defaultValue="false">
+                    <caption>Permanently Hide On Dismiss</caption>
+                    <description/>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Debug">
+                <property key="debugMode" type="boolean" defaultValue="false">
+                    <caption>Debug mode</caption>
+                    <description>Show popup on every device for debug purposes.</description>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Text">
+            <propertyGroup caption="Text">
+                <property key="titleText" type="string" defaultValue="Add to Home Screen" required="true">
+                    <caption>Title text</caption>
+                    <description/>
+                </property>
+                <property key="bodyText" type="string" defaultValue="This website has app functionality. Add it to your home screen to use it in fullscreen and while offline." required="true">
+                    <caption>Body text</caption>
+                    <description/>
+                </property>
+                <property key="firstStepText" type="string" defaultValue="1) Press the 'Share' button" required="true">
+                    <caption>First step text</caption>
+                    <description/>
+                </property>
+                <property key="secondStepText" type="string" defaultValue="2) Press 'Add to Home Screen'" required="true">
+                    <caption>Second step text</caption>
+                    <description/>
+                </property>
+                <property key="cancelText" type="string" defaultValue="Cancel" required="true">
+                    <caption>Cancel text</caption>
+                    <description/>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <propertyGroup caption="Events">
+                <property key="onCancelAction" type="action" required="false">
+                    <caption>On cancel action</caption>
+                    <description>Action to trigger when cancel button is clicked</description>
+                </property>
+            </propertyGroup>
         </propertyGroup>
     </properties>
 </widget>
