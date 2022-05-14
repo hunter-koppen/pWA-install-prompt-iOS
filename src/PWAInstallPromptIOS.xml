@@ -16,8 +16,8 @@
                     <description/>
                 </property>
                 <property key="permanentlyHideOnDismiss" type="boolean" defaultValue="false">
-                    <caption>Permanently Hide On Dismiss</caption>
-                    <description/>
+                    <caption>Hide on dismiss</caption>
+                    <description>Permanently hide the popup on dismiss</description>
                 </property>
             </propertyGroup>
             <propertyGroup caption="Debug">
@@ -29,25 +29,45 @@
         </propertyGroup>
         <propertyGroup caption="Text">
             <propertyGroup caption="Text">
-                <property key="titleText" type="string" defaultValue="Add to Home Screen" required="true">
+                <property key="titleText" type="textTemplate" required="true">
                     <caption>Title text</caption>
                     <description/>
+                    <translations>
+                        <translation lang="en_US">Add to Home Screen</translation>
+                        <translation lang="nl_NL">Toevoegen aan startscherm</translation>
+                    </translations>
                 </property>
-                <property key="bodyText" type="string" defaultValue="This website has app functionality. Add it to your home screen to use it in fullscreen and while offline." required="true">
+                <property key="bodyText" type="textTemplate" multiline="true" required="true">
                     <caption>Body text</caption>
                     <description/>
+                    <translations>
+                        <translation lang="en_US">This website has app functionality. Add it to your home screen to use it in fullscreen.</translation>
+                        <translation lang="nl_NL">Deze website heeft app-functionaliteit. Voeg het toe aan je startscherm om het op volledig scherm te gebruiken.</translation>
+                    </translations>
                 </property>
-                <property key="firstStepText" type="string" defaultValue="1) Press the 'Share' button" required="true">
+                <property key="firstStepText" type="textTemplate" required="true">
                     <caption>First step text</caption>
                     <description/>
+                    <translations>
+                        <translation lang="en_US">1) Press the 'Share' button</translation>
+                        <translation lang="nl_NL">1) Druk op de knop 'Delen'</translation>
+                    </translations>
                 </property>
-                <property key="secondStepText" type="string" defaultValue="2) Press 'Add to Home Screen'" required="true">
+                <property key="secondStepText" type="textTemplate" required="true">
                     <caption>Second step text</caption>
                     <description/>
+                    <translations>
+                        <translation lang="en_US">2) Press 'Add to Home Screen'</translation>
+                        <translation lang="nl_NL">2) Druk op 'Toevoegen aan startscherm'</translation>
+                    </translations>
                 </property>
-                <property key="cancelText" type="string" defaultValue="Cancel" required="true">
+                <property key="cancelText" type="textTemplate" required="true">
                     <caption>Cancel text</caption>
                     <description/>
+                    <translations>
+                        <translation lang="en_US">Cancel</translation>
+                        <translation lang="nl_NL">Annuleren</translation>
+                    </translations>
                 </property>
             </propertyGroup>
         </propertyGroup>
