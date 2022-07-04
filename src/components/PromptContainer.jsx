@@ -23,7 +23,7 @@ export function PromptContainer(props) {
             copyTitle={titleText.value}
             copyBody={bodyText.value}
             copyShareButtonLabel={firstStepText.value}
-            copyAddHomeButtonLabel={secondStepText.value}n
+            copyAddHomeButtonLabel={secondStepText.value}
             copyClosePrompt={cancelText.value}
             debug={debugMode}
             permanentlyHideOnDismiss={permanentlyHideOnDismiss}
